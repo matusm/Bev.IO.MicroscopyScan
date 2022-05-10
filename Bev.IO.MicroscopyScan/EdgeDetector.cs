@@ -13,18 +13,18 @@ namespace Bev.IO.MicroscopyScan
             Prepare();
         }
 
-        public int ValidProfiles { get { return validProfiles; } }
-        public int TotalProfiles { get { return totalProfiles; } }
-        public double LowerBound { get { return lowerBound; } }
-        public double UpperBound { get { return upperBound; } }
-        public double Threshold { get { return threshold; } }
-        public double ReducedThreshold { get { return reducedThreshold; } }
-        public double[] LinePositions { get { return linePositions; } }
-        public double[] LineWidths { get { return lineWidths; } }
-        public double[] LinePositionsSpan { get { return linePositionsSpan; } }
-        public double[] LineWidthsSpan { get { return lineWidthsSpan; } }
-        public double[] LeftEdgePositions { get { return leftEdgePositions; } }
-        public double[] RightEdgePositions { get { return rightEdgePositions; } }
+        public int ValidProfiles => validProfiles;
+        public int TotalProfiles => totalProfiles;
+        public double LowerBound => lowerBound;
+        public double UpperBound => upperBound;
+        public double Threshold => threshold;
+        public double ReducedThreshold => reducedThreshold;
+        public double[] LinePositions => linePositions;
+        public double[] LineWidths => lineWidths;
+        public double[] LinePositionsSpan => linePositionsSpan; 
+        public double[] LineWidthsSpan => lineWidthsSpan; 
+        public double[] LeftEdgePositions => leftEdgePositions; 
+        public double[] RightEdgePositions => rightEdgePositions; 
         
         public void Evaluate()
         {
@@ -141,7 +141,6 @@ namespace Bev.IO.MicroscopyScan
             lowerBound = ic.LowerBound;
             upperBound = ic.UpperBound;
             contrast = upperBound - lowerBound;
-            ic = null;
         }
 
         double[] GetLeftEdgePositionForProfil(int profileNumber, double threshold)
